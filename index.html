@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="style.css">
+    <title>Pagina-GpincayA2</title>
+</head>
+<body>
+    <header>
+        <div class="caja">
+            <p class="logo">El Genero Metroidvania</p>
+                <nav>
+                    <a href="#MetroidVania">Significado Metroidvania</a>
+                <a href="#Juegos-MetroidVanias">Juegos MetroidVania Recomendados</a>
+            </nav>
+        </div>
+    </header>
+    <div id="BotonesAudio">
+        <audio id="Audio"autoplay loop="getElementById('Audio').play()">
+            <source src="Audios/Hollow Knight OST - Enter Hallownest.mp3" type="audio/mpeg">
+            Por lo visto, tu dispositivo no es capaz de soportar la musica.
+        </audio>
+        <button id="SM">Desactivar Musica</button>
+        <button id="VD">Bajar Volumen</button>
+        <button id="VU">Subir Volumen</button>
+        <script>
+      const audio = document.getElementById("Audio");
+     const muteButton = document.getElementById("SM");
+    
+     let isMuted = false;
+    
+     muteButton.addEventListener("click", function() {
+       if (isMuted) {
+         audio.muted = false;
+         muteButton.innerHTML = "Desactivar Musica";
+       } else {
+         audio.muted = true;
+         muteButton.innerHTML = "Activar Musica";
+          }
+      
+          isMuted = !isMuted;
+    const volumeDownButton = document.getElementById("VD");
+    const volumeUpButton = document.getElementById("VU");
+    
+      volumeDownButton.addEventListener("click", function() {
+        audio.volume = audio.volume - 0.1;
+      });
+    
+      volumeUpButton.addEventListener("click", function() {
+        audio.volume = audio.volume + 0.1;
+      });
+    });
+    </script>
+    </div>
+    <section id="hero">
+        <h1>EL MEJOR GENERO DE JUEGO<br> QUE DEBES PROBARLO CUANTO ANTES</h1>
+    </section>
+    
+    <section id="MetroidVania">
+        <div class="Contenedor">
+        <div class="img-MV">
+            <div class="textoMV">
+                <h2> ¿QUÉ ES <span class="color-acento">METROIDVANIA?</span></h2>
+                <p> La definición Metroidvania es un subgénero de
+                videojuego de acción-aventura 
+                basado en un concepto de plataformas no lineal.
+                <br>
+                Su palabra viene de la Unión de 2 juegos 
+                llamado Metroid y Castelvania.
+                <br>
+                El genero consite en gran mundo conectado que el jugador puede explorar,
+                sin embargo, el acceso a parte del mundo se limita por puertas u otros
+                mecanismos que solo se abrirán después que el jugador haya adquirido 
+                unos artículos especiales, herramientas, armas o habilidades 
+                en el juego.
+                <br>
+                <br>
+                Si desea tener mas conocimientos del genero, pulse este botón y
+                lo enviara para que vea con mas detalles.
+                <br>
+            <div id="Wiki">
+                <form action="https://es.wikipedia.org/wiki/Metroidvania"> 
+                    <button> Ver más aquí</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </p>
+</div>
+
+</section>
+    <section id="Juegos-MetroidVanias">
+        <div class="contenedor">
+            <h2>JUEGOS <span class="color-acento"> METROIDVANIAS</span> RECOMENDADOS</h2>
+            <div class="JuegosMV">
+                <div class="Juegos">
+                    <a href="#infoHK" onclick="stopMusic(); document.getElementById('infoHK').style.display='block'; document.getElementById('infoBS').style.display='none'; document.getElementById('infoTJ').style.display='none'; document.getElementById('MusicaHK').play()">
+                        <h3> <span class="color-HK"> HOLLOW KNIGHT</span></h3> 
+                    </a>
+                    <div id="infoHK" style="display:none">
+                        <p>Hollow Knight cuenta la historia del Caballero,
+                            en su búsqueda por descubrir los secretos del largamente
+                            abandonado reino de los insectos de Hallownest,
+                            cuyas profundidades atraen a los aventureros y valientes
+                            con la promesa de tesoros o la respuesta a misterios antiguos.
+                            <br>
+                            <form action="https://youtu.be/UAO2urG23S4">
+                            <button id="BotonHK">Trailer del juego</button>
+                            </form>
+                        </p>
+                        <audio id="MusicaHK" controls style="display:none">
+                            <source src="Audios/MusicaHK.mp3" type="audio/mpeg">
+                          </audio>
+                    </div>
+                </div>
+
+
+                <div class="Juegos">
+                    <a href="#infoBS" onclick="stopMusic(); document.getElementById('infoHK').style.display='none'; document.getElementById('infoBS').style.display='block'; document.getElementById('infoTJ').style.display='none'; document.getElementById('MusicaBS').play()">
+                        <h3> <span class="color-BS">BLASPHEMOUS</span></h3>
+                    </a>
+                    <div id="infoBS" style="display:none">
+                        <p>Una terrible maldición conocida como el Milagro ha caído
+                            sobre la tierra de Cvstodia y sus habitantes, con ello muchos
+                            han sido castigados con mutaciones y terribles sucesos paranormales.
+                            <br>
+                            Siendo tu el Penintente en el silencio, ultimo superviviente de su especie,
+                            atrapado en un bucle de muerte y resurrecion constante es tu deber
+                            el buscar el origen y librar el mundo del Milagro.
+                            <br>
+                            <form action="https://youtu.be/_ARK_WGA6No">
+                            <button id="BotonBS">Trailer del juego</button>
+                            </form>
+                        </p>
+                        <audio id="MusicaBS" controls autoloop style="display:none">
+                            <source src="Audios/Blasphemous - BS.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+
+
+                <div class="Juegos">
+                    <a href="#infoTJ" onclick="stopMusic(); document.getElementById('infoHK').style.display='none'; document.getElementById('infoBS').style.display='none'; document.getElementById('infoTJ').style.display='block'; document.getElementById('MusicaTJ').play()">
+                    <h3><span class="color-TJ">THE TARNISHING OF JUXTIA</span></h3>
+                    </a>
+                    <div id="infoTJ" style="display:none">
+                    <p>Un ser creado por Juxtia, una diosa caída, nos encomienda
+                        la tarea de recuperar las tierras de su reino, para hacerlo tienes que derrotar a Drelium, 
+                        un dios de otro planeta que busca controlar
+                        el mundo entero.
+                        <br>Por el camino encontras rastros de “Tarnishing”,
+                        una misteriosa corrupción que convirtió a los antiguos soldados en monstruos
+                        y dejó el mundo al borde de la destrucción.
+                        <br>
+                        <form action="https://youtu.be/C4jvWUsqxqA">
+                            <button id="BotonTJ">Trailer del juego</button>
+                        </form>
+                    </p>
+                    <audio id="MusicaTJ" controls autoloop style="display:none">
+                        <source src="Audios/TJ.mp3" type="audio/mpeg">
+                    </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function stopMusic() {
+          var audioElements = document.getElementsByTagName("audio");
+          for (var i = 0; i < audioElements.length; i++) {
+            audioElements[i].pause();
+            audioElements[i].currentTime = 0;
+          }
+        }
+        </script>
+  <footer>
+    <div class="copy">
+    <p>&copy; SrX-GpincayA2 2023</p>
+    </div>
+</footer>
+</body>
+</html>
